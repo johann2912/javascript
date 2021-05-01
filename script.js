@@ -162,13 +162,13 @@ let edad_dos;
 
 // Convertir a String 
 let valor = true;
-console.log(typeof valor);
+//console.log(typeof valor);
 
 valor = String(valor); // "true"
 valor = String(false); // "false"
 valor = String(null); // "null"
 valor = String(undefined); // undefined
-console.log(typeof valor);
+//console.log(typeof valor);
 
 //Convertir a numero
 
@@ -180,9 +180,10 @@ console.log(typeof valor);
 let cadena = "123";
 let num_cad = Number(cadena); // 123
 
-console.log(Number('hola')); // NaN
+//console.log(Number('hola')); // NaN
 
 /* 
+TABLA CONVERSION NUMEROS
 undefined -> NaN
 null -> 0
 true -> 1
@@ -192,8 +193,9 @@ string 'hola' -> NaN
 */
 
 //Convertir a booleano
-console.log(Boolean("hola"));
+//console.log(Boolean("hola"));
 /*
+TABLA CONVERSION BOOLEANOS
 undefined -> false
 null -> false
 string '' -> false
@@ -203,8 +205,8 @@ NaN -> false
 '0' -> true
 '  ' -> true
 */ 
-console.log(Boolean(String(0)))
-console.log(Boolean(0))
+//console.log(Boolean(String(0)))
+//console.log(Boolean(0))
 
 // OPERADORES BÁSICOS
 
@@ -239,29 +241,29 @@ a = 1;
 console.log(+a);
 
 a = -1;
-console.log(+a);
+//console.log(+a);
 
-console.log(+true);
-console.log(+false);
-console.log(+NaN);
-console.log(+undefined);
-console.log(+null);
-console.log(+"");
+//console.log(+true);
+//console.log(+false);
+//console.log(+NaN);
+//console.log(+undefined);
+//console.log(+null);
+//console.log(+"");
 
 a = "2";
 b = "3";
 
-console.log(+a + +b); // <- SON LO MISMO -> console.log(Number(a) + Number(b));
+//console.log(+a + +b); // <- SON LO MISMO -> console.log(Number(a) + Number(b));
 
     // OPERACIÓN UNARIA -
     a = 1;
-    console.log(-a);
+    //console.log(-a);
 
     a = -1;
-    console.log(-a);
+    //console.log(-a);
 
-    console.log(-true);
-    console.log(-false);
+    //console.log(-true);
+    //console.log(-false);
 
 // ASIGNACIONES
 a = 2 + 3;
@@ -296,11 +298,227 @@ a --;
 // POSICIÓN del Incremento o Decremento
 a = 1;
 b = ++ a; // se aplica antes de ir a la siguiete linea
-console.log(b); // 2
+/console.log(b); // 2
 
 a = 1;
 b = a ++; // se aplica en la siguiente linea
 c = a;
-console.log(b); // 1
-console.log(c); // 2
+//console.log(b); // 1
+//console.log(c); // 2
 
+
+// COMPARACIONES
+
+console.log(2 > 1); // true
+console.log(2 == 1); // false
+console.log(2 != 1); // true
+
+let resultado = 2 > 1;
+
+// Comparaciones entre cadenas
+console.log('z' > 'a'); // true
+console.log('Show' > 'show'); // false
+console.log('casa' > 'casas'); // false 
+
+// 1. La letra minúscula es mayor que la mayúscula
+// 2. La palabra con mas letras, despues de pasar la primera condicion, es mayor que la de menos letras
+
+
+// Comparación de diferentes tipos
+// Al comparar valores de diferentes tipos, JS convierte los valores a números
+// TODA COMPARACIÓN CON NaN es false
+
+a = 0;
+b = '0';
+
+boleano_a = Boolean(a); // false
+boleano_b = Boolean(b); // true 
+
+console.log('**************************');
+console.log('2' > 1); // true
+console.log('01' == 1); // true
+console.log(true > 0); // true 
+console.log(false == 0); // true
+
+console.log('*******NaN********');
+// NaN
+console.log('hola' > 0); // false
+console.log('hola' < 0); // false
+
+
+
+console.log('*********Undefined********');
+// Undefined
+console.log(undefined > 0); // false
+console.log(undefined < 0); // false
+console.log(undefined == 0); // false
+
+
+console.log('*********Null*************');
+// Null
+console.log(null > 0); // fals
+console.log(null < 0); // false
+console.log(null >= 0); // true
+console.log('**************************');
+
+console.log('***Null y Undefined == ****');
+// El UNDEFINED Y EL NULL EN LAS COMPARACIONES DE IGUALACION NO ESTRICTAS ACTUAN DIFERENTE
+// actúan diferente: son iguales entre sí, pero no a ningún otro valor.
+console.log(null == undefined); // true
+console.log(null == 5); // false
+console.log(undefined == 5) // false
+console.log('**************************');
+
+
+console.log('**No diferencia de 0 de falso ==****');
+console.log(0 == false); // true
+console.log(' ' == false); // true
+console.log('***********************************');
+
+
+// Igualacion estricta
+console.log(0 === false); // false
+console.log(null === undefined) // false 
+
+// practica
+5 > 4 // true
+"apple" > "pineapple" //false
+"2" > "12" //true
+undefined == null //false
+undefined === null //true
+null  == 0 // false
+null === +"0" // false
+
+
+// SENTENCIA IF
+
+/*
+if(condicion){
+
+}else if(condicion){
+
+}else{
+
+}
+*/ 
+
+// if de linea
+if (4 > 5) console.log('Mensaje');
+
+// if con mas de una sentencia
+if (4 > 5) {
+    b = 5 + 3;
+    console.log('Mensaje');
+}
+
+if ('45a' / 3) {
+    console.log('No entró');
+} //  no entra al ciclo
+
+if ('0') {
+    console.log('entró');
+}
+
+if (1) {
+    console.log('entró o no entró?');
+}
+
+let edadx;
+
+if (edadx) {
+    console.log('Variable definida');
+}else{
+    console.log('Variable indefinida');
+}
+
+// Haga un algoritmo que dada una edad retorne true si es mayor de edad y false si no lo es
+let edad_usuario = 17;
+
+if (edad_usuario >= 18) {
+    console.log(true);
+}else{
+    console.log(false);
+}
+
+console.log(edad_usuario >= 18);
+
+// Operador Ternario
+// condición ? opreación verdadera : operación falsa;
+resultado = edad_usuario >= 18 ? x=5 : x=7;
+
+
+// Operador lógico
+/*
+v or v = v
+v or f = v
+f or v = f
+f or f = f
+*/ 
+
+console.log('******** Operador OR ******');
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // true
+
+
+if (4 == 4 || 2 > 5) {
+    console.log('Verdadero');
+}
+
+// resultado = valor_uno || valor_dos || valor_tres;
+// 1. Evalua los operando de izquierda a derecha 
+/* 2. Por cada operando convierte el valor a booleano si el 
+   resultado es true, se detiene y retorna el valor original de ese operando */
+// 3. Si todos los operandos han sido evaluados (todos eran falsos), retorna el último operando.
+
+let comparacion_booleana = true || false || true; // true 
+    comparacion_booleana = '0' || '0'; // '0';
+    comparacion_booleana = undefined || null || NaN || ''; // ''
+    comparacion_booleana = undefined || null || 3 || ''; // 3
+    comparacion_booleana = undefined || 'hola' || 3 || ''; 'hola'
+// RESUMEN: Devuelve el primer valor verdadero o el ultimo si todos son falsos
+
+console.log('****************************');
+
+console.log('******** Operador AND ******');
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // true
+
+if (4 == 4 && 2 < 5) {
+    console.log('Verdadero');
+}
+
+
+    comparacion_booleana = true && false && true;  // false
+    comparacion_booleana = '0' && '0'; // '0'
+    comparacion_booleana = undefined && null && NaN && ''; // Undefined
+    comparacion_booleana = undefined && null && 3 && ''; // Undefined
+    comparacion_booleana = undefined && 'hola' && 3 && ''; // Undefined
+
+// resumen: Devuelve el primer valor falso o el último si todos son verdaderos.
+console.log('****************************');
+
+
+// PREVALENCIA U ORDER ENTRE OR Y AND
+
+// a && b || c && d = (a && b) || (c && d)
+
+// Negación
+console.log(!true); // false
+console.log(!false); // true
+console.log(!!undefined); // false == Boolean(undefined);
+
+
+console.log('******** Nillish o Fsuion de nulos ******');
+// Nillish o Fusion de nulos
+// 1. Evalua los operando de izquierda a derecha 
+/* 2. Por cada operando revisa si es null o undefined y regresa el primero que no sea 
+      ni nulo ni undefined */
+// 3. Si todos los operandos han sido evaluados son nulos o undefined regresa el último
+
+a = null ?? undefined ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos'; // "hola"
+
+a = undefined ?? undefined ?? undefined ?? null ?? null ?? null ?? null; //null
