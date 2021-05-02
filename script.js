@@ -522,3 +522,105 @@ console.log('******** Nillish o Fsuion de nulos ******');
 a = null ?? undefined ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos'; // "hola"
 
 a = undefined ?? undefined ?? undefined ?? null ?? null ?? null ?? null; //null
+
+// BUCLES WHILE Y FOR
+
+/* WHILE (condicion){
+
+}*/
+console.log("********* WHILE ***********");
+let i = 1;
+while (i< 10) {
+    console.log(`El valor de i es: ${i}`);
+    i++;
+}
+
+console.log("*************************");
+i = 10;
+while (i) {
+    console.log(`El valor de i es: ${i}`);
+    i--;
+}
+
+console.log("*************************");
+
+console.log("*******DO WHILE********");
+i = 1;
+do {
+    console.log(`El valor de i es: ${i}`);
+    i++;
+} while (i <= 10);
+
+console.log("*************************");
+
+console.log("*********CICLO FOR************");
+/*
+    for(comienzo; condicion; incremento){
+
+    }
+*/
+for (let i = 0; i <= 10; i++) {
+    console.log(`El valor de i es: ${i}`);
+    
+}
+
+for (let i = 10; i ; i++) {
+    console.log(`El valor de i es: ${i}`);
+}
+
+console.log("*************************");
+//Alcanse de la variable
+let w = 0;
+
+for (let w;  w<=10; w++) {
+    console.log(`El valor de w es: ${w}`);
+}
+console.log(`El valor de w por fuera es: ${w}`);
+
+console.log("*************************");
+// Saltadp de partes
+for (; w<=10;) {
+    console.log(`El valor de w es: ${w}`);
+    
+}
+
+console.log("*************************");
+
+console.log("********* BREAK ********");
+// BREAK Y CONTINUE
+
+w = 0;
+while(1){
+    console.log(`El valor de w es: ${w}`);
+    if(w == 11) break;
+}
+
+for (i = 1; i <= 10; i++) {
+    if (i%2 != 0) continue;
+    console.log(`${i} es un número par.`);
+    
+}
+
+console.log("********* ETIQUETA ************");
+
+// Etiqueta para break y continue
+
+for(i = 0; i <= 10; i++){
+    for(j = 0; j <= 10; j++){
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break;
+    }
+    if(j == 2) break;
+}
+console.log('Salió');
+
+
+principal: for(j = 0; j <= 10; j++){
+for(i = 0; i <= 10; i++){
+
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break;
+    }
+
+}
+console.log('Salió');
